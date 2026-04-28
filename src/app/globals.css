@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* ===== GARNETT LOCAL FONT ===== */
+@font-face {
+  font-family: "Garnett-Regular";
+  src: url("/garnett-font-family/Garnett-Regular.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett-Light";
+  src: url("/garnett-font-family/Garnett-Light.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett-Medium";
+  src: url("/garnett-font-family/Garnett-Medium.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett-Semibold";
+  src: url("/garnett-font-family/Garnett-Semibold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett-Bold";
+  src: url("/garnett-font-family/Garnett-Bold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garnett-Black";
+  src: url("/garnett-font-family/Garnett-Black.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Garnett";
+  src: url("/garnett-font-family/Garnett-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+.font-garnett { font-family: "Garnett", sans-serif; }
+
+/* ===== CSS VARIABLES ===== */
+:root {
+  --font-garnett-regular:  "Garnett-Regular",  sans-serif;
+  --font-garnett-light:    "Garnett-Light",    sans-serif;
+  --font-garnett-medium:   "Garnett-Medium",   sans-serif;
+  --font-garnett-semibold: "Garnett-Semibold", sans-serif;
+  --font-garnett-bold:     "Garnett-Bold",     sans-serif;
+  --font-garnett-black:    "Garnett-Black",    sans-serif;
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+.font-garnett-regular  { font-family: var(--font-garnett-regular); }
+.font-garnett-light    { font-family: var(--font-garnett-light); }
+.font-garnett-medium   { font-family: var(--font-garnett-medium); }
+.font-garnett-semibold { font-family: var(--font-garnett-semibold); }
+.font-garnett-bold     { font-family: var(--font-garnett-bold); }
+.font-garnett-black    { font-family: var(--font-garnett-black); }
+
+/* Roboto classes */
+.font-roboto { font-family: var(--font-roboto), sans-serif; }
+
+/* ===== CONTAINER ===== */
+.Mycontainer {
+  width: 90%;
+  max-width: 1440px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+/* ===== SCROLL ANIMATION GLOBAL ===== */
+
+:root {
+  --reveal-distance: 40px;
+  --reveal-duration: 0.7s;
+}
+
+/* Shuruaat mein hidden */
+.reveal {
+  opacity: 0;
+  transform: translateY(var(--reveal-distance));
+  transition: opacity var(--reveal-duration) ease,
+              transform var(--reveal-duration) ease;
+  will-change: transform, opacity;
+}
+
+/* Jab visible hoga */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay variants — alag alag elements ke liye */
+.reveal.delay-1 { transition-delay: 0.1s; }
+.reveal.delay-2 { transition-delay: 0.2s; }
+.reveal.delay-3 { transition-delay: 0.3s; }
+.reveal.delay-4 { transition-delay: 0.4s; }
