@@ -69,7 +69,8 @@ const Careers = () => {
           <a
             href="mailto:careers@norpak.pk"
             className="text-blue-500 hover:underline"
-          >
+          >                
+          
             careers@norpak.pk
           </a>
         </p>
