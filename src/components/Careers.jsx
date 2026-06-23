@@ -5,6 +5,17 @@ import React from "react";
 
 const Careers = () => {
   const [pdfOpen, setPdfOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    if (pdfOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [pdfOpen]);
   return (
     <section className="bg-[#EBEBEB]">
       <div className="w-full h-[300px] sm:h-[400px] md:h-screen lg:h-screen relative">
