@@ -1,8 +1,10 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const Careers = () => {
+  const [pdfOpen, setPdfOpen] = React.useState(false);
   return (
     <section className="bg-[#EBEBEB]">
       <div className="w-full h-[300px] sm:h-[400px] md:h-screen lg:h-screen relative">
@@ -69,8 +71,8 @@ const Careers = () => {
           <a
             href="mailto:careers@norpak.pk"
             className="text-blue-500 hover:underline"
-          >                
-          
+          >
+
             careers@norpak.pk
           </a>
         </p>
@@ -79,17 +81,14 @@ const Careers = () => {
           not be considered. Only shortlisted candidates will be contacted.
         </p>
 
-        <p className="reveal delay-13 font-roboto font-bold text-[14px] md:text-[16px] tracking-[-0.5px] leading-[24px] text-[#AE0000] text-center mb-5">
-          Sales & Marketing Manager
-        </p>
-        {/* <p className="reveal delay-14 font-roboto font-bold text-[14px] md:text-[16px] tracking-[-0.5px] leading-[24px] text-[#AE0000] text-center mb-5">
-          Human Resources Officer
-        </p> */}
-        <p className="reveal delay-15 font-roboto font-bold text-[14px] md:text-[16px] tracking-[-0.5px] leading-[24px] text-[#AE0000] text-center">
-          Communications Officer (Corporate & Marketing)
+        <p
+          onClick={() => setPdfOpen(true)}
+          className="reveal delay-13 font-roboto font-bold text-[14px] md:text-[16px] tracking-[-0.5px] leading-[24px] text-[#AE0000] text-center mb-5 cursor-pointer hover:underline"
+        >
+          Senior Officer Warehouse
         </p>
 
-        <div className="reveal delay-16 flex justify-center mt-6 sm:mt-8 md:mt-10 lg:mt-12">
+        <div className="reveal delay-16 flex justify-center mt-6 sm:mt-8 md:mt-10 lg:mt-5">
           <Link href="mailto:careers@norpak.pk">
             <button className="font-roboto font-medium bg-[#000000] hover:bg-gray-700 text-white tracking-wide uppercase leading-[13px] text-[10px] md:text-[13px] px-6 py-2.5 transition-colors duration-200 cursor-pointer">
               Apply Now
@@ -97,6 +96,29 @@ const Careers = () => {
           </Link>
         </div>
       </div>
+      {pdfOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
+          onClick={() => setPdfOpen(false)}
+        >
+          <div
+            className="relative w-[90vw] h-[90vh] bg-white rounded shadow-lg"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setPdfOpen(false)}
+              className="absolute top-2 right-3 text-black text-2xl font-bold z-10 hover:text-red-600"
+            >
+              ✕
+            </button>
+            <iframe
+              src="/Web-Images/career/senior-officer-warehouse.pdf"
+              className="w-full h-full rounded"
+              title="Senior Officer Warehouse"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 };
