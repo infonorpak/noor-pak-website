@@ -66,7 +66,7 @@ const Careers = () => {
         </p>
       </div>
 
-      <div className="text-center Mycontainer pt-10 sm:pt-12 md:pt-16 lg:pt-25">
+      {/* <div className="text-center Mycontainer pt-10 sm:pt-12 md:pt-16 lg:pt-25">
         <h2 className="reveal delay-8 font-garnett-medium font-bold text-[18px] md:text-[39px] mb-5 tracking-tighter leading-[43px]">
           Current Vacancies
         </h2>
@@ -129,7 +129,7 @@ const Careers = () => {
             />
           </div>
         </div>
-      )}
+      )} */}
     </section>
   );
 };
