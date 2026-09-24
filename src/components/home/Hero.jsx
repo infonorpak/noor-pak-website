@@ -25,9 +25,7 @@ const Hero = () => {
 
             <p className="reveal delay-1 font-garnett text-[#636363] text-[14px] md:text-[16px] mb-5 tracking-[-0.5px] leading-[24px]">
               We are a social enterprise based in Sultan Town, Faisalabad,
-              Pakistan. With more than 30 years of experience, we design,
-              develop and manufacture exclusive, handmade interior home products
-              from more sustainable materials.
+              Pakistan.
             </p>
 
             <p className="reveal delay-2 font-garnett text-[#636363] text-[14px] md:text-[16px] mb-5 tracking-[-0.5px] leading-[24px]">
