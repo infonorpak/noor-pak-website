@@ -18,7 +18,9 @@ const Hero = () => {
           {" "}
           <div className="w-full md:w-1/2">
             <h2 className="reveal font-garnett-regular text-[18px] md:text-[22px] mb-5 tracking-tighter leading-[31px]">
-              Inspired by Scandinavian design & traditional Pakistani.
+              Inspired by Scandinavian design & traditional Pakistani
+              artisanship, we bring you home interior and textile products for a
+              more conscious way of living.
             </h2>
 
             <p className="reveal delay-1 font-garnett text-[#636363] text-[14px] md:text-[16px] mb-5 tracking-[-0.5px] leading-[24px]">
