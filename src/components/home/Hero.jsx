@@ -37,7 +37,9 @@ const Hero = () => {
             </p>
 
             <p className="reveal delay-3 font-garnett text-[#636363] text-[14px] md:text-[16px] mb-5 tracking-[-0.5px] leading-[24px]">
-              Norpak not only secures decent employment to artisans.
+              Norpak not only secures decent employment to artisans; we also
+              provide free, quality education to children and adolescents at the
+              LAMS school.
             </p>
             <Link href="/about">
               <button className="reveal delay-4 font-roboto font-medium bg-[#000000] hover:bg-gray-700 text-white tracking-wide uppercase leading-[13px] text-[10px] md:text-[13px] px-6 py-2.5 transition-colors duration-200 cursor-pointer">
